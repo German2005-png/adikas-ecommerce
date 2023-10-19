@@ -1,0 +1,37 @@
+.content-error{
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+    width: 100%;
+}
+.form-error{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid;
+}
+.search-error{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.submit-error{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.error-home{
+    text-decoration: underline;
+}
+.error-home:hover{
+    transition: all 0.2s ease-in;
+    color: #fff;
+    background-color: #000;
+}

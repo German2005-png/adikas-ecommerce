@@ -1,0 +1,139 @@
+{
+    "article2": [
+        {
+            "id": 1, 
+            "nombre": "Camiseta Titular Boca Juniors 23/24 Azul Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 34.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57d46a83396a46268447a7bb4a751909_9366/camiseta-titular-boca-juniors-23-24.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/57d46a83396a46268447a7bb4a751909_9366/Camiseta_Titular_Boca_Juniors_23-24_Azul_HT3697_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0c86cbb62ed8466b8d0d148fbd0bf38e_9366/Camiseta_Titular_Boca_Juniors_23-24_Azul_HT3697_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8ffcd4a4a6374d3fab98ddaddb5ceff9_9366/Camiseta_Titular_Boca_Juniors_23-24_Azul_HT3697_41_detail.jpg"
+        },
+        {
+            "id": 2, 
+            "nombre": "Camiseta Titular  River Plate 23/24 Blanco Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 34.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/401778e50ef4449d9656d40e9346b8af_9366/camiseta-titular--river-plate-23-24.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/401778e50ef4449d9656d40e9346b8af_9366/Camiseta_Titular_River_Plate_23-24_Blanco_HT3679_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2a415812f2fc4f75baab1b63640e0e55_9366/Camiseta_Titular_River_Plate_23-24_Blanco_HT3679_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b9a36927213c4739b1b61cabf35e0024_9366/Camiseta_Titular_River_Plate_23-24_Blanco_HT3679_41_detail.jpg"
+        },
+        {
+            "id": 3, 
+            "nombre": "Camiseta Titular Boca Juniors 23/24 (Mujer) Azul Mujer Fútbol",
+            "descripcion": "Mujer Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 31.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fbf410fc53944df4b8a5d8f765ab8712_9366/camiseta-titular-boca-juniors-23-24-mujer.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbf410fc53944df4b8a5d8f765ab8712_9366/Camiseta_Titular_Boca_Juniors_23-24_Mujer_Azul_HY0280_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4c079658b0134237970c6705a4e625c2_9366/Camiseta_Titular_Boca_Juniors_23-24_Mujer_Azul_HY0280_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7da76c25eaf4525b01b09c5de91704d_9366/Camiseta_Titular_Boca_Juniors_23-24_Mujer_Azul_HY0280_41_detail.jpg"
+        },
+        {
+            "id": 4, 
+            "nombre": "Camiseta Titular River Plate 23/24 (Mujer) Blanco Mujer Fútbol",
+            "descripcion": "Mujer Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 31.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e4807116506d42bfaafa1001aa5da1d0_9366/camiseta-titular-river-plate-23-24-mujer.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e4807116506d42bfaafa1001aa5da1d0_9366/Camiseta_Titular_River_Plate_23-24_Mujer_Blanco_HY3209_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cf72a7b9ba3546dfa4a8b516868c8422_9366/Camiseta_Titular_River_Plate_23-24_Mujer_Blanco_HY3209_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7b79b21cb02843d5bc202517d67ccb72_9366/Camiseta_Titular_River_Plate_23-24_Mujer_Blanco_HY3209_41_detail.jpg"
+        },
+        {
+            "id": 5, 
+            "nombre": "Camiseta de Calentamiento River Plate Rojo Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 29.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fd8858e302f04e8f8039ffe9448238c4_9366/camiseta-de-calentamiento-river-plate.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fd8858e302f04e8f8039ffe9448238c4_9366/Camiseta_de_Calentamiento_River_Plate_Rojo_HY0448_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fd8858e302f04e8f8039ffe9448238c4_9366/Camiseta_de_Calentamiento_River_Plate_Rojo_HY0448_01_laydown.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/813fefa804904297bf3329a668b8b7d4_9366/Camiseta_de_Calentamiento_River_Plate_Rojo_HY0448_41_detail.jpg"
+        },
+        {
+            "id": 6, 
+            "nombre": "Short Titular Boca Juniors 23/24 Azul Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Nuevo",
+            "precio": 19.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5425015fb08149ba91c3625038e35421_9366/short-titular-boca-juniors-23-24.jpg",
+            "url2": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/5425015fb08149ba91c3625038e35421_9366/Short_Titular_Boca_Juniors_23-24_Azul_IT9367_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c0a8d37c08aa4d12b45b9d8531bcc009_9366/Short_Titular_Boca_Juniors_23-24_Azul_IT9367_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a3bfb83f9e534bc882d2d1dd1b5378b6_9366/Short_Titular_Boca_Juniors_23-24_Azul_IT9367_41_detail.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Calzas Yoga Essentials Tiro Alto Negro Mujer Studio",
+            "descripcion": "Mujer Studio",
+            "envios": "Materiales Reciclados",
+            "precio": 30.199,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/74c3dd996ffd4cd89e57ae3100d85ef2_9366/calzas-yoga-essentials-tiro-alto.jpg"
+        },
+        {
+            "id": 8, 
+            "nombre": "Short Uniforme Titular River Plate 23/24 Negro Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Nuevo",
+            "precio": 19.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/b9acdf7adc3a47d784264d9cbc4c61b0_9366/short-uniforme-titular-river-plate-23-24.jpg"
+        },
+        {
+            "id": 9, 
+            "nombre": "Camiseta de Calentamiento Boca Juniors Multicolor Hombre Fútbol",
+            "descripcion": "Hombre Fútbol",
+            "envios": "Envío Gratis",
+            "precio": 29.999,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e86f60ed318f457caea5e3fbfdbef6f3_9366/camiseta-de-calentamiento-boca-juniors.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e86f60ed318f457caea5e3fbfdbef6f3_9366/Camiseta_de_Calentamiento_Boca_Juniors_Multicolor_HY0382_01_laydown.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/66078abb9d8543a78a2f217916a4c129_9366/Camiseta_de_Calentamiento_Boca_Juniors_Multicolor_HY0382_02_laydown_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b5ddbf3151e54846a3c24e17647ea515_9366/Camiseta_de_Calentamiento_Boca_Juniors_Multicolor_HY0382_41_detail.jpg"
+        },
+        {
+            "id": 10, 
+            "nombre": "Campera Deportiva Tiro Suit-Up Advanced Negro Mujer Sportswear",
+            "descripcion": "Mujer Sportswear",
+            "envios": "Envío Gratis",
+            "precio": 78.399,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f35310e51b6a4c158553af4800d7bb31_9366/campera-deportiva-tiro-suit-up-advanced.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ea17dcccdd894c7da5ecaf4800d76acc_9366/Campera_Deportiva_Tiro_Suit-Up_Advanced_Negro_IB2305_21_model.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/92e42ccc80b8410ca2a9af4800d77412_9366/Campera_Deportiva_Tiro_Suit-Up_Advanced_Negro_IB2305_23_hover_model.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/322c48249db54cb38e27af4800d77d46_9366/Campera_Deportiva_Tiro_Suit-Up_Advanced_Negro_IB2305_25_model.jpg"
+        },
+        {
+            "id": 11, 
+            "nombre": "Zapatillas Avryn Negro Sportswear",
+            "descripcion": "Sportswear",
+            "envios": "Envío Gratis",
+            "precio": 87.399,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fa2487dc7b6047089e36af5c00bb966b_9366/zapatillas-avryn.jpg",
+            "url2": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fa2487dc7b6047089e36af5c00bb966b_9366/Zapatillas_Avryn_Negro_HP5969_01_standard.jpg",
+            "url3": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/30bfd6b7ef4e437d9071af5c00bba647_9366/Zapatillas_Avryn_Negro_HP5969_02_standard_hover.jpg",
+            "url4": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1a4a74a07046442ba3d8af5c00bbaec9_9366/Zapatillas_Avryn_Negro_HP5969_03_standard.jpg"
+        },
+        {
+            "id": 12, 
+            "nombre": "Zapatillas Avryn Gris Sportswear",
+            "descripcion": "Sportswear",
+            "envios": "Solo en adidas",
+            "precio": 87.399,
+            "cantidad":0,
+            "url": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/89a809639c5e4f9a9e6faf5d00b57421_9366/zapatillas-avryn.jpg"
+        }
+    ]
+}
