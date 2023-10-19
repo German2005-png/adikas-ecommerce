@@ -9,7 +9,7 @@
             "dest": "/"
         },
         {
-            "src": ":nombre/",
+            "src": ":/product/:nombre/",
             "dest": "/product/"
         }
     ],
