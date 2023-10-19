@@ -10,7 +10,7 @@
         },
         {
             "src": "/product/",
-            "dest": ":nombre"
+            "dest": "/:nombre"
         }
     ]
 }
