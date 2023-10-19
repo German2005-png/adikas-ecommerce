@@ -33,6 +33,7 @@ export function Cart({
     }
   };
   const [sizeCart, setsizeCart] = useState(false);
+  const [sizeCart2, setsizeCart2] = useState(false);
   useEffect(() => {
     function handleSizeCart() {
       if (window.innerWidth <= 959) {
@@ -47,6 +48,20 @@ export function Cart({
       window.removeEventListener("resize", handleSizeCart);
     };
   }, []);
+  useEffect(()=>{
+    function handleSizeCart2(){
+      if(window.innerWidth <= 599){
+        setsizeCart2(true);
+      }else{
+        setsizeCart2(false);
+      }
+    }
+    handleSizeCart2()
+    window.addEventListener("resize", handleSizeCart2);
+    return ()=>{
+      window.removeEventListener("resize", handleSizeCart2);
+    }
+  },[])
   return (
     <>
       <Navegation contadorPro={contadorPro} />
@@ -211,6 +226,8 @@ export function Cart({
         </>
       ) : (
         <>
+        {allProduct.length ?(
+          <>
           <div className="flex-cart-small">
             <div className="flex-content1">
               <h1 className="cart-title">TU CARRITO</h1>
@@ -223,69 +240,141 @@ export function Cart({
                 proceso de compra ahora para hacerte con ellos.
               </p>
             </div>
-            {allProduct.map((items) => (
-              <div style={{ marginBottom: "30px" }}>
-                <article className="article-flex" id="articles">
-                  <a
-                    className="article-title-cart"
-                    href={`/product/${convertToURL(items.nombre)}/`}
-                    onClick={() =>
-                      localStorage.setItem("guardar", JSON.stringify(items))
-                    }
-                  >
-                    <img src={items.url} alt="product" />
-                  </a>
-                  <div>
-                    <div className="flex-article-description">
-                      <div className="article-flex-description">
-                        <a
-                          className="article-description-title"
-                          href={`/product/${convertToURL(items.nombre)}/`}
-                          onClick={() =>
-                            localStorage.setItem(
-                              "guardar",
-                              JSON.stringify(items)
-                            )
-                          }
+            {!sizeCart2 ? (
+              <>
+              {allProduct.map((items) => (
+                <div style={{ marginBottom: "30px" }}>
+                  <article className="article-flex" id="articles">
+                    <a
+                      className="article-title-cart"
+                      href={`/product/${convertToURL(items.nombre)}/`}
+                      onClick={() =>
+                        localStorage.setItem("guardar", JSON.stringify(items))
+                      }
+                    >
+                      <img src={items.url} alt="product" />
+                    </a>
+                    <div>
+                      <div className="flex-article-description">
+                        <div className="article-flex-description">
+                          <a
+                            className="article-description-title"
+                            href={`/product/${convertToURL(items.nombre)}/`}
+                            onClick={() =>
+                              localStorage.setItem(
+                                "guardar",
+                                JSON.stringify(items)
+                              )
+                            }
+                          >
+                            <span>{items.nombre}</span>
+                          </a>
+                          <p className="article-description-precio">
+                            ${items.precio}
+                          </p>
+                          <button
+                            className="article-description-x"
+                            onClick={() => {
+                              allProduct = allProduct.filter(
+                                (eliminar) => eliminar !== items
+                              );
+                              setallProduct(allProduct);
+                              localStorage.setItem(
+                                "cartContador1",
+                                localStorage.getItem("cartContador1") - 1
+                              );
+                            }}
+                          >
+                            <img src={x} />
+                          </button>
+                        </div>
+                        <p className="cart-size">TAMAÑO: M</p>
+                        <select
+                          name="choose-contador-product"
+                          id={`contador-product-${items.id}`}
+                          className="choose-contador-product"
+                          value={selectValue}
+                          onChange={handleSelectChange}
                         >
-                          <span>{items.nombre}</span>
-                        </a>
-                        <p className="article-description-precio">
-                          ${items.precio}
-                        </p>
-                        <button
-                          className="article-description-x"
-                          onClick={() => {
-                            allProduct = allProduct.filter(
-                              (eliminar) => eliminar !== items
-                            );
-                            setallProduct(allProduct);
-                            localStorage.setItem(
-                              "cartContador1",
-                              localStorage.getItem("cartContador1") - 1
-                            );
-                          }}
-                        >
-                          <img src={x} />
-                        </button>
+                          {[1, 2, 3, 4, 5].map((num) => (
+                            <option value={num}>{num}</option>
+                          ))}
+                        </select>
                       </div>
-                      <p className="cart-size">TAMAÑO: M</p>
-                      <select
-                        name="choose-contador-product"
-                        id={`contador-product-${items.id}`}
-                        className="choose-contador-product"
-                        value={selectValue}
-                        onChange={handleSelectChange}
-                      >
-                        {[1, 2, 3, 4, 5].map((num) => (
-                          <option value={num}>{num}</option>
-                        ))}
-                      </select>
                     </div>
-                  </div>
-                </article>
-              </div>
-            ))}
+                  </article>
+                </div>
+              ))}
+              </>
+            ) : (
+              <>
+              {allProduct.map((items) => (
+                <div style={{ marginBottom: "30px" }}>
+                  <article className="article-flex" id="articles" style={{border: "none"}}>
+                    <a
+                      className="article-title-cart"
+                      href={`/product/${convertToURL(items.nombre)}/`}
+                      onClick={() =>
+                        localStorage.setItem("guardar", JSON.stringify(items))
+                      }
+                    >
+                      <img style={{width: "164px"}} src={items.url} alt="product" />
+                    </a>
+                    <div>
+                      <div className="flex-article-description" style={{padding: "4px"}}>
+                        <div className="article-flex-description">
+                          <a
+                            className="article-description-title"
+                            href={`/product/${convertToURL(items.nombre)}/`}
+                            style={{fontSize: "17px"}}
+                            onClick={() =>
+                              localStorage.setItem(
+                                "guardar",
+                                JSON.stringify(items)
+                              )
+                            }
+                          >
+                            <span>{items.nombre}</span>
+                          </a>
+                          <button
+                            className="article-description-x"
+                            onClick={() => {
+                              allProduct = allProduct.filter(
+                                (eliminar) => eliminar !== items
+                              );
+                              setallProduct(allProduct);
+                              localStorage.setItem(
+                                "cartContador1",
+                                localStorage.getItem("cartContador1") - 1
+                              );
+                            }}
+                          >
+                            <img src={x} />
+                          </button>
+                        </div>
+                        <p className="cart-size">TAMAÑO: M</p>
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+                          <strong>${items.precio}</strong>
+                        <select
+                          name="choose-contador-product"
+                          id={`contador-product-${items.id}`}
+                          className="choose-contador-product"
+                          value={selectValue}
+                          onChange={handleSelectChange}
+                          style={{padding: "0px", width: "auto", border: "none", outline: "none", fontWeight: "bold", fontSize: "16px"}}
+                        >
+                          {[1, 2, 3, 4, 5].map((num) => (
+                            <option value={num}><p>Cantidad: {num}</p></option>
+                          ))}
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              ))}
+              </>
+            )}
             <div className="flex-promotional-code">
               <div className="promotional-code">
                 <strong>USÁ UN CÓDIGO PROMOCIONAL</strong>
@@ -313,6 +402,28 @@ export function Cart({
               </button>
             </div>
           </div>
+        </>
+        ) : (
+          <>
+          <div className="cart" style={{padding: "20px"}}>
+            <h1 className="cart-title">EL CARRITO ESTÁ VACÍO</h1>
+            <p className="cart-description">
+              Una vez que añadas algo a tu carrito, aparecerá acá. ¿Listo
+              para empezar?
+            </p>
+            <button className="cart-btn ee">
+              Empezar <img src={rightarrow} />
+            </button>
+            <p className="choose-pay">OPCIONES DE PAGO</p>
+          </div>
+          <img
+          className="cart-img"
+          src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/logosar29jun23-d_tcm216-1038617.png"
+          alt="Metodos de pago"
+          style={{width: "100%", maxWidth: "250px"}}
+          />
+          </>
+        )}
         </>
       )}
       <Footer />
