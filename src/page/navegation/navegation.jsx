@@ -10,12 +10,17 @@ import cartBtn from "../../assets/cartBtn.svg";
 import heart from "../../assets/heart.svg";
 import burger from "../../assets/burger.svg";
 import profile from "../../assets/profile.svg";
+import x from "../../assets/x.svg";
+import { NavBurger } from "./NavBurger.jsx";
 export function Navegation({
   allProduct,
   setallProduct,
   contadorPro,
   precioProduct,
   setPrecioProduct,
+  onSearchCont,
+  setonSearchCont,
+  setLeep
 }) {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -41,6 +46,8 @@ export function Navegation({
   const [navCatHombre, setNavCatHombre] = useState(false);
   const [navCatNiños, setNavCatNiños] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth <= 959);
+  const [onoffBurger, setOnOffBurger] = useState(false);
+  const [writeSearch, setWriteSearch] = useState(false);
   useEffect(() => {
     function handleResize() {
       setIsLargeScreen(window.innerWidth <= 959);
@@ -50,9 +57,24 @@ export function Navegation({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  function inputCero(){
+    if(document.getElementById("nav-search").value == ""){
+      setWriteSearch(false);
+      setonSearchCont(false);
+    }else{
+      setWriteSearch(true);
+      setonSearchCont(true);
+    }
+    setLeep(document.getElementById("nav-search").value)
+  }
+  function searchBtnX(){
+    document.getElementById("nav-search").value = "";
+    setWriteSearch(false)
+    setonSearchCont(false);
+  }
   return (
     <>
-    <div></div>
+    {onoffBurger ? <NavBurger onoffBurger={onoffBurger} setOnOffBurger={setOnOffBurger} /> : ""}
     <div className={`navegation-content ${visible ? "visible" : ""}`} style={navStyle}>
       <div className="fairPrices">
         <button>
@@ -62,17 +84,12 @@ export function Navegation({
       </div>
       <ul className="nav-help-cont">
         <li className="nav-help-li">
-          <a className="nav-help-a" href="">
+          <a className="nav-help-a" href="/ayuda">
             ayuda
           </a>
         </li>
         <li className="nav-help-li">
-          <a className="nav-help-a" href="">
-            cambios y devoluciones
-          </a>
-        </li>
-        <li className="nav-help-li">
-          <a className="nav-help-a" href="">
+          <a className="nav-help-a" href="/order-tracker">
             seguimiento de pedidos
           </a>
         </li>
@@ -87,12 +104,12 @@ export function Navegation({
           <>
             <div className="nav-flex-query">
               <button className="nav-btn-burger" onClick={()=>{
-                console.log("click")
+                setOnOffBurger(!onoffBurger)
               }}>
                 <img src={burger} alt="" />
               </button>
               <a className="nav-a-end" href="">
-                <span>0</span>
+                <span></span>
                 <img src={heart} alt="" />
               </a>
             </div>
@@ -250,16 +267,29 @@ export function Navegation({
           ) : (
             <>
               <li className="nav-li-end">
-                <div className="nav-flex-search-end">
+                <form className="nav-flex-search-end" onSubmit={(e)=> {
+                  if(document.getElementById("nav-search").value == ""){
+                    e.preventDefault()
+                  }
+                }} >
                   <input
                     className="nav-search-end"
                     type="text"
+                    id="nav-search"
                     placeholder="Buscar"
+                    onChange={()=> inputCero()}
+                    autoComplete="off"
                   />
-                  <button className="nav-submit-end">
-                    <img src={submit} alt="" />
-                  </button>
-                </div>
+                  {!writeSearch ? (
+                    <button className="nav-submit-end" id="nav-submit">
+                      <img src={submit} alt="" />
+                    </button>
+                  ): (
+                    <button className="nav-submit-end" id="nav-submit-x" type="button" onClick={()=> searchBtnX()}>
+                      <img src={x} alt="" />
+                    </button>
+                  )}
+                </form>
               </li>
               <li className="nav-li-end">
                 <a className="nav-a-end" href="">

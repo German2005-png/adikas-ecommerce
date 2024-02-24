@@ -96,7 +96,7 @@ export function Article4({ Products4, allProduct, setallProduct, contadorPro, se
                     <img src={heart}/>
                   </div>
                 </div>
-                <a className="article4-a" href={`/product/$${convertToURL(product.nombre)}/`}>
+                <a className="article4-a" href={`/product/${product.id}/$${convertToURL(product.nombre)}/`}>
                   <div className="article4-precio">
                     <p>${product.precio}</p>
                   </div>

@@ -104,17 +104,17 @@ export function Article2({ Products2, allProduct, setallProduct, contadorPro, se
             </div>
             <div className="scroll">
               {Products2.map((product) => (
-                <div className="flex-article2" id="flex-article2" key={product.id}>
+                <div className="flex-article2" id="flex-article2" key={product.id} onMouseEnter={()=>{
+                  localStorage.setItem("guardar", JSON.stringify(product))
+                }}>
                   <div className="heart">
                       <div>
                       <img src={heart} alt="" />
                       </div>
                   </div>
-                  <a className="article2-a" onClick={()=>{
-                    localStorage.setItem("guardar", JSON.stringify(product))
-                  }} href={`/product/${convertToURL(product.nombre)}/`}>
+                  <a className="article2-a" href={`/product/${product.id}/${convertToURL(product.nombre)}/`}>
                     <div className="article2-precio">
-                      <p>${product.precio}</p>
+                      <p>${new Intl.NumberFormat('es-ES').format(product.precio)}</p>
                     </div>
                     <img src={product.url} alt="" />
                     <div className="article2-flex-description">

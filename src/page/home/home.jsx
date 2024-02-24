@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {Navegation} from "../navegation/navegation.jsx";
 import { Content1 } from "../home/header.jsx";
 import { Aside } from "../home/aside.jsx";
@@ -13,10 +13,33 @@ import { Footer } from "./footer.jsx";
 import {article2} from "../../article2.json"
 import "../../App.css";
 export function Home({contadorPro, setcontadorPro}) {
-  
+  const [onSearchCont, setonSearchCont] = useState(false);
+  const [leep, setLeep] = useState(null);
+  const componenteRef = useRef();
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (componenteRef.current && !componenteRef.current.contains(event.target)) {
+        setonSearchCont(false);
+        console.log(event)
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   return (
     <>
-      <Navegation  Products2={article2} contadorPro={contadorPro}/>
+      <Navegation  Products2={article2} contadorPro={contadorPro} onSearchCont={onSearchCont} setonSearchCont={setonSearchCont} leep={leep} setLeep={setLeep}/>
+      {onSearchCont ? (
+        <>
+        <div className="cont-search-value" ref={componenteRef}>
+          <p>{leep}</p>
+        </div>
+        </>
+      ): ""}
       <Content1 contadorPro={contadorPro} setcontadorPro={setcontadorPro} />
       <Aside contadorPro={contadorPro} setcontadorPro={setcontadorPro} />
       <Advertising contadorPro={contadorPro} setcontadorPro={setcontadorPro} />

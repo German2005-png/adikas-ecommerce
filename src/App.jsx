@@ -6,6 +6,8 @@ import { Product } from "./page/product/product.jsx";
 import { useState, useRef } from "react";
 import { article2 } from "./article2.json";
 import { ErrorPage } from "./page/Error/errorPage.jsx";
+import Forum from "./page/forum/forum.jsx";
+import { Crazyrush } from "./page/crazyrush/crazyrush.jsx";
 function App() {
   const [contador, setcontador] = useState(0);
   const [allProduct, setallProduct] = useState(
@@ -42,6 +44,30 @@ function App() {
             }
           />
           <Route
+            path="/originals-forum"
+            element={
+              <Forum
+                addToCart={addToCart}
+                contadorPro={contador}
+                setcontadorPro={setcontador}
+                precio={precio}
+                setPrecio={setPrecio}
+              />
+            }
+          />
+          <Route
+            path="/botines_pack"
+            element={
+              <Crazyrush
+                addToCart={addToCart}
+                contadorPro={contador}
+                setcontadorPro={setcontador}
+                precio={precio}
+                setPrecio={setPrecio}
+              />
+            }
+          />
+          <Route
             path="/cart"
             element={
               <Cart
@@ -56,7 +82,7 @@ function App() {
             }
           />
           <Route
-            path="/product/:nombre/"
+            path="/product/:id/:nombre"
             element={
               <Product
                 product={article2}

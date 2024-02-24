@@ -37,7 +37,7 @@ export function Content1() {
             <h1>PACK CRAZYRUSH</h1>
             <p>Sentí la energía</p>
             <div className="flex-header-a">
-              <a className="header-a ll l2" href="#">
+              <a className="header-a ll l2" href='/botines_pack'>
                 COMPRAR AHORA
                 <img className='ee' src={rightarrow} alt="" />
               </a>
@@ -48,4 +48,15 @@ export function Content1() {
       </section>
     </>
   );
+}
+
+function ErrorInfo(){
+  return(
+    <>
+    <div className='cont-error-info'>
+      <h1 className='error-info-title'>No se encontro la dirección</h1>
+      <button className='error-info-btn'>¡ESTA BIEN!</button>
+    </div>
+    </>
+  )
 }

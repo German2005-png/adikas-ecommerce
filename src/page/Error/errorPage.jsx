@@ -16,7 +16,7 @@ export function ErrorPage({contadorPro}){
             </button>
             <input className="search-error" type="text" placeholder="BUSCAR"/>
             </form>
-            <p className="error-txt">Vuelve a nuestra <a className="error-home" href="">tienda online</a></p>
+            <p className="error-txt">Vuelve a nuestra <a className="error-home" href="/">tienda online</a></p>
         </div>
         <Discount />
         <Category />

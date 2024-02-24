@@ -9,7 +9,7 @@
     scroll-snap-stop: always (X Mandatory)
 }
 .navegation-content{
-    z-index: 10000;
+    z-index: 9999;
     transition: transform 0.3s ease-in-out;
     transform: translateY(-100%);
 }
@@ -54,6 +54,10 @@
 }
 .nav-help-a{
     font-size: 12px;
+    border-bottom: 1px solid transparent;
+}
+.nav-help-a:hover{
+    border-bottom: 1px solid;
 }
 .navegation{
     display: flex;

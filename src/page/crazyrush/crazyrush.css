@@ -1,0 +1,123 @@
+.header-img-crazyrush{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    object-fit: cover;
+    height: 50vh;
+    position: relative;
+    user-select: none;
+}
+.flex-header-crazyrush{
+    position: relative;
+}
+.cont-header-description-crazyrush{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    color: #fff;
+    height: 100%;
+    justify-content: center;
+    margin-left: 3rem;
+}
+.header-description-title{
+    font-size: 42px;
+}
+
+/* products crazyrush */
+.flex-content-crazyrush{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: center;
+    margin: auto;
+}
+.content-crazyrush{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.cont-crazyrush-title{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cont-crazyrush-item-ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cont-crazyrush-item{
+    display: flex;
+    align-items: center;
+}
+.cont-crazyrush-item{
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    position: relative;
+    height: 100%;
+}
+.cont-crazyrush-item:hover{
+    border: 1px solid #000;
+}
+.cont-crazyrush-item-img{
+    position: relative;
+}
+.crazyrush-item-img{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+}
+.fad{
+    max-width: 600px;
+}
+.cont-crazyrush-item-description{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.crazyrush-item-description{
+    color: #767677;
+}
+.crazyrush-item-envios{
+    font-size: 14px;
+}
+.crazyrush-item-precio{
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    margin-left: 5px;
+    padding: 0px 3px;
+}
+.crazyrush-heart-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.crazyrush-item-nombre{
+    white-space: pre-line;
+    width: 240px;
+}
+.flex-image-crazyrush{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    position: relative;
+}
+.image-crazyrush{
+    max-width: 315px;
+}
+.cont-image-crazyrush{
+    width: 300px;
+}

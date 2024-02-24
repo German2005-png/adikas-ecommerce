@@ -16,6 +16,9 @@ import rightarrow from "../../assets/rightarrow.svg";
 import guiadetalles from "../../assets/guiadetalles.svg";
 import { Article4Copy } from "../../carousel/carousel.jsx";
 import "./product.css";
+import crazyrush1 from "../../crazyrush1.json";
+import crazyrush2 from "../../crazyrush2.json";
+import forum from "../../forum.json";
 import Cookies from "js-cookie";
 import { useState, useRef , useEffect} from "react";
 export function Product({
@@ -37,12 +40,27 @@ export function Product({
     // document.getElementById("navegation-content").style.position = "relative";
     return text;
   }
+  function convertToURL2(text) {
+    text = text.replaceAll(" ", "-");
+    text = text.replaceAll(".", "");
+    text = encodeURIComponent(text)
+    // document.getElementById("navegation-content").style.position = "relative";
+    return text;
+  }
   let item = decodeURIComponent(location.pathname).replace("/product/", "")
   item = item.endsWith("/") ? item.slice(0, -1).replaceAll("-", " "): item.replaceAll("-", " ")
-  const datosRecuperados = JSON.parse(localStorage.getItem("guardar"));
-  // if(datosRecuperados.nombre != item){
-  //   localStorage.setItem("guardar", JSON.parse(fs.readFileSync("../../article2.json")).find(it => it.name == item))
-  // }
+  let itemId = parseInt(item)
+  let itemName = item.replace(itemId + "/", "")
+  console.log(itemName)
+  const datosRecuperados = article2.find((value)=> value.id == itemId) || forum.forum.find((value)=> value.id == itemId) || crazyrush1.crazyrush1.find((value)=> value.id == itemId) || crazyrush2.crazyrush2.find((value)=> value.id == itemId);
+  let bol = article2.find((i)=> i.nombre == itemName)
+  console.log(datosRecuperados.nombre)
+  if(itemName == datosRecuperados.nombre.replace(".", "")){
+    console.log("Es igual")
+  }else{
+    console.log("No es igual")
+    location.pathname = `/product/${datosRecuperados.id}/${convertToURL2(datosRecuperados.nombre)}`
+  }
   const [selectedTalla, setSelectedTalla] = useState("");
   const tallas = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
   const handleTallaClick = (talla) => {
@@ -113,7 +131,7 @@ export function Product({
                 </h1>
               </div>
               <div className="product-flex-precio">
-                <span>${datosRecuperados.precio}</span>
+                <span title={new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}>${new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}</span>
               </div>
               <div className="product-flex-discount">
                 <h4>NO APLICAN CAMBIOS, DEVOLUCIONES Y DESCUENTOS</h4>
@@ -176,7 +194,7 @@ export function Product({
                 <div className="aside-footer">
                   <img src={Delivery} alt="" />
                   <button className="product-footer-aside">
-                    ENVÍO GRATIS A PARTIR DE ${datosRecuperados.precio}
+                    ENVÍO GRATIS A PARTIR DE ${new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}
                   </button>
                 </div>
                 <div className="aside-footer">
@@ -231,7 +249,7 @@ export function Product({
               </ul>
             </div>
             <h1 className="product-title-small" title={datosRecuperados.nombre}>{datosRecuperados.nombre}</h1>
-            <strong className="product-precio-small" title={datosRecuperados.precio}>${datosRecuperados.precio}</strong>
+            <strong className="product-precio-small" title={new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}>${new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}</strong>
             <img className="product-imagen-small" src={datosRecuperados.url2} alt="" />
             <div className="product-description1-small">
               <h3>NO APLICAN CAMBIOS, DEVOLUCIONES Y DESCUENTOS</h3>
@@ -290,7 +308,7 @@ export function Product({
             <div className="aside-footer">
                   <img src={Delivery} alt="" />
                   <button className="product-footer-aside">
-                    ENVÍO GRATIS A PARTIR DE ${datosRecuperados.precio}
+                    ENVÍO GRATIS A PARTIR DE ${new Intl.NumberFormat('es-ES').format(datosRecuperados.precio)}
                   </button>
                 </div>
                 <div className="aside-footer">
