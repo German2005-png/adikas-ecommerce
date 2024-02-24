@@ -27,7 +27,6 @@ export function Cart({
   }
   const [sizeCart, setsizeCart] = useState(false);
   const [sizeCart2, setsizeCart2] = useState(false);
-  const [pr, setPr] = useState(allProduct.reduce((total, item) => total + item.precio, 0))
   useEffect(() => {
     function handleSizeCart() {
       if (window.innerWidth <= 959) {
@@ -90,7 +89,7 @@ export function Cart({
                     {allProduct.map((items) => (
                       <div style={{ marginBottom: "30px" }}>
                         <article className="article-flex" id="articles">
-                          <a
+                  R        <a
                             className="article-title-cart"
                             href={`/product/${items.id}/${convertToURL(items.nombre)}/`}
                           >
@@ -245,7 +244,7 @@ export function Cart({
                   <article className="article-flex" id="articles">
                     <a
                       className="article-title-cart"
-                      href={`/product/${items.id}/${convertToURL(items.nombre)}/`}
+                      href={`/product/${convertToURL(items.nombre)}/`}
                       onClick={() =>
                         localStorage.setItem("guardar", JSON.stringify(items))
                       }
@@ -267,10 +266,8 @@ export function Cart({
                           >
                             <span>{items.nombre}</span>
                           </a>
-                          <p className="article-description-precio" title={
-                            new Intl.NumberFormat('es-ES').format(items.precio)
-                          }>
-                          ${new Intl.NumberFormat('es-ES').format(items.precio)}
+                          <p className="article-description-precio">
+                            ${items.precio}
                           </p>
                           <button
                             className="article-description-x"
@@ -296,7 +293,7 @@ export function Cart({
                           value={selectValue}
                           onChange={handleSelectChange}
                         >
-                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+                          {[1, 2, 3, 4, 5].map((num) => (
                             <option value={num}>{num}</option>
                           ))}
                         </select>
@@ -355,6 +352,7 @@ export function Cart({
                         <p className="cart-size">TAMAÑO: M</p>
                         <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
                           <strong>${new Intl.NumberFormat('es-ES').format(items.precio)}</strong>
+                          <strong>${items.precio}</strong>
                         <select
                           name="choose-contador-product"
                           id={`contador-product-${items.id}`}
@@ -411,7 +409,7 @@ export function Cart({
               Una vez que añadas algo a tu carrito, aparecerá acá. ¿Listo
               para empezar?
             </p>
-            <button className="cart-btn ee" onClick={()=> {window.location.href = "/"}}>
+            <button className="cart-btn ee">
               Empezar <img src={rightarrow} />
             </button>
             <p className="choose-pay">OPCIONES DE PAGO</p>
