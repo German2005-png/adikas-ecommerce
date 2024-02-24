@@ -17,6 +17,7 @@ export function Cart({
   let datosCart = JSON.parse(
     localStorage.getItem(`cart${localStorage.getItem("cartContador1")}`)
   );
+  const [pr, setPr] = useState(allProduct.reduce((total, item) => total + item.precio, 0))
   const datosCart2 = JSON.parse(localStorage.getItem("allProducts"));
   const datosCartItems = JSON.parse(localStorage.getItem("cartItems"));
   const [selectValue, setSelectValue] = useState("1");
@@ -89,7 +90,7 @@ export function Cart({
                     {allProduct.map((items) => (
                       <div style={{ marginBottom: "30px" }}>
                         <article className="article-flex" id="articles">
-                  R        <a
+                          <a
                             className="article-title-cart"
                             href={`/product/${items.id}/${convertToURL(items.nombre)}/`}
                           >
