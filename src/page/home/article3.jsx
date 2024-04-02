@@ -78,7 +78,7 @@ export function Article3({ Products3, allProduct, setallProduct, contadorPro, se
       <main className="main-article3">
         <ul className="article3-ul">
           <li className="article3-li">
-            <button className="article3-btn black">Lo mejor de adidas</button>
+            <button className="article3-btn black">Lo mejor de adikas</button>
           </li>
         </ul>
         <div className="article3-cont">

@@ -33,7 +33,7 @@ export function Advertising() {
                     <div className="article1-text">
                       <h4>¡Felicidades atletas!</h4>
                       <p>
-                        adidas conquistó el podio de los 21K de Buenos Aires de la
+                        adikas conquistó el podio de los 21K de Buenos Aires de la
                         mano de las Adizero Adios Pro 3 y nuestros atletas
                         vencieron sus límites.
                       </p>

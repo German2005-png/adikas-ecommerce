@@ -234,7 +234,7 @@ export function Navegation({
                 }}
               >
                 <a className="nav-a-center" title="MUNDO ADIDAS" href="">
-                  MUNDO ADIDAS
+                  MUNDO ADIKAS
                 </a>
               </li>
             </ul>
