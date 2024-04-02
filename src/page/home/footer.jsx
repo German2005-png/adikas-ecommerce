@@ -1,28 +1,13 @@
 export function Footer(){
+    const ListTxtFooter = ["Configuración de las cookies", "Nuestros Datos", "Términos y Condiciones", "Política de Cookies", "Política de Privacidad", "Seleccionar País", "Reclamos"];
     return(
         <footer>
             <ul className="flex-footer">
-                <li className="footer-li">
-                    <a className="footer-a" href="">Configuración de las cookies</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Nuestros Datos</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Términos y Condiciones</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Política de Cookies</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Política de Privacidad</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Seleccionar País</a>
-                </li>
-                <li className="footer-li">
-                    <a className="footer-a" href="">Reclamos</a>
-                </li>
+                {ListTxtFooter.map((Element, index)=> (
+                    <li className="footer-li" key={index}>
+                        <a className="footer-a" href="">{Element}</a>
+                    </li>
+                ))}
             </ul>
             <div className="flex-footer2">
                 <p>© 2023 Fernando Peralta</p>

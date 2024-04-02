@@ -20,16 +20,16 @@ export function Home({contadorPro, setcontadorPro}) {
     const handleClickOutside = (event) => {
       if (componenteRef.current && !componenteRef.current.contains(event.target)) {
         setonSearchCont(false);
-        console.log(event)
       }
     };
-
+    alert("¡ESTE SÍTIO NO ES OFICIAL DE ADIDAS!")
     document.addEventListener('click', handleClickOutside);
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
+  console.log("ESTE SÍTIO NO ES OFICIAL DE ADIDAS")
   return (
     <>
       <Navegation  Products2={article2} contadorPro={contadorPro} onSearchCont={onSearchCont} setonSearchCont={setonSearchCont} leep={leep} setLeep={setLeep}/>

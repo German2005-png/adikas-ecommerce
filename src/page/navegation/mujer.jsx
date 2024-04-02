@@ -1,4 +1,10 @@
 export function Mujer({CategoryMujer, SetCategoryMujer}) {
+  const categoryMUJER = ["Novedades", "Lo Más Vendidos", "Personaliza tu Camiseta", "Exclusivo Miembros", "Solo en adikas", "Próximos Lanzamientos"];
+  const categoryMUJER1 = ["River Plate ¡Nuevo!", "Precios Justos", "Esenciales de Primavera 🌷"];
+  const categoryMUJER2 = ["Novedades", "Ver Todas las Zapatillas", "Running", "Gimnasio y Training", "Outdoor", "Botines", "Ojotas", "Calzado de Plataforma", "Originals"];
+  const categoryMUJER3 = ["Novedades", "Remeras y Chombas", "Calzas", "Camperas", "Buzos", "Top Deportivos", "Pantalones", "Camisetas de Fútbol", "Shorts", "Vestidos", "Polleras", "Conjuntos", "Originals"];
+  const categoryMUJER4 = ["Bolsos y Mochilas", "Pelotas", "Gorras", "Medias"];
+  const categoryMUJER5 = ["Running", "Fútbol", "Gimnasio y Training", "Tenis", "Outdoor", "Ciclismo", "Yoga", "Padel"];
   return (
     <>
       <div
@@ -21,52 +27,17 @@ export function Mujer({CategoryMujer, SetCategoryMujer}) {
                 <h4 className="category-mujer-title">PRODUCTO DESTACADO</h4>
               </a>
               <ul className="category-mujer-ul">
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Novedades
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Lo Más Vendidos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Personaliza tu Camiseta
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Exclusivo Miembros
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Solo en adidas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Próximos Lanzamientos
-                  </a>
-                </li>
+                {categoryMUJER.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                    <a className="category-mujer-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
                 <br />
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    River Plate ¡Nuevo!
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Precios Justos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Esenciales de Primavera 🌷
-                  </a>
-                </li>
+                {categoryMUJER1.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                    <a className="category-mujer-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-mujer-bottom">
@@ -81,51 +52,11 @@ export function Mujer({CategoryMujer, SetCategoryMujer}) {
                 <h4 className="category-mujer-title">CALZADO</h4>
               </a>
               <ul className="category-mujer-ul">
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Novedades
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Ver Todas las Zapatillas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Running
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Gimnasio y Training
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Outdoor
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Botines
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Ojotas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Calzado de Plataforma
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Originals
-                  </a>
-                </li>
+                {categoryMUJER2.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                    <a className="category-mujer-a" href="">{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-mujer-bottom">
@@ -140,71 +71,11 @@ export function Mujer({CategoryMujer, SetCategoryMujer}) {
                 <h4 className="category-mujer-title">ROPA</h4>
               </a>
               <ul className="category-mujer-ul">
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Novedades
-                  </a>
+                {categoryMUJER3.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                    <a className="category-mujer-a" href="">{Element}</a>
                 </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Remeras y Chombas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Calzas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Camperas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Buzos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Top Deportivos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Pantalones
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Camisetas de Fútbol
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Shorts
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Vestidos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Polleras
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Conjuntos
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Originals
-                  </a>
-                </li>
+                ))}
               </ul>
             </div>
             <div className="category-mujer-bottom">
@@ -219,26 +90,11 @@ export function Mujer({CategoryMujer, SetCategoryMujer}) {
                 <h4 className="category-mujer-title">ACCESORIOS</h4>
               </a>
               <ul className="category-mujer-ul">
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Bolsos y Mochilas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Pelotas
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Gorras
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Medias
-                  </a>
-                </li>
+                {categoryMUJER4.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                    <a className="category-mujer-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-mujer-bottom">
@@ -253,46 +109,11 @@ export function Mujer({CategoryMujer, SetCategoryMujer}) {
                 <h3 className="category-mujer-title">DEPORTES</h3>
               </a>
               <ul className="category-mujer-ul">
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Running
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Fútbol
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Gimnasio y Training
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Tenis
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Outdoor
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Ciclismo
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Yoga
-                  </a>
-                </li>
-                <li className="category-mujer-li">
-                  <a className="category-mujer-a" href="">
-                    Padel
-                  </a>
-                </li>
+                {categoryMUJER5.map((Element, index)=> (
+                  <li className="category-mujer-li" key={index}>
+                  <a className="category-mujer-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-mujer-bottom">

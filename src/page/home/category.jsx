@@ -4,6 +4,13 @@ import twitter from "../../assets/twitter.svg";
 import pinterest from "../../assets/pinterest.svg";
 import youtube from "../../assets/youtube.svg";
 export function Category(){
+  const category1 = ["Calzado", "Zapatillas", "Ropa", "Accesorios", "Botines", "Rompevientos", "Conjuntos", "Ojotas"];
+  const category2 = ["Novedades", "Black Friday", "Outlet", "Hot Sale", "Cyber Monday"];
+  const category3 = ["adiClub", "adikas app", "adikas Runners"];
+  const category4 = ["Selección Argentina", "River Plate", "Boca Juniors", "Fútbol", "Running", "Básquet", "Training"];
+  const category5 = ["Ultraboost", "Stan Smith", "Akicolor", "Superstart", "Originals", "Forum", "Colección Black & White"];
+  const category6 = ["Dudas Frecuentes", "Realizar Pedidos", "Productos adikas", "Pago", "Envío", "Autogestionar mi Devolución", "Devoluciones", "Cambio en Tiendas", "Como Usar Nuestro Sitio", "Como Saber el Talla de tu Bra", "Guia de Talles", "Mapa del Sitio"];
+  const category7 = ["Acerca de adikas", "Trabaja en Nuestro Equipo Prensa", "Prensa", "Información Corporativa"];
     return(
       <>
         <div className="category-cont">
@@ -11,104 +18,39 @@ export function Category(){
             <div className="category">
               <h3 className="category-title">PRODUCTOS</h3>
               <ul className="category-ul">
-                <li className="category-li">
-                  <a className="category-a" href="">Calzado</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Zapatillas</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Ropa</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Accesorios</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Botines</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Rompevientos</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Conjuntos</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Ojotas</a>
-                </li>
+                {category1.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
                 <br />
-                <li className="category-li">
-                  <a className="category-a" href="">Novedades</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Black Friday</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Outlet</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Hot Sale</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Cyber Monday</a>
-                </li>
+                {category2.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
                 <br />
-                <li className="category-li">
-                  <a className="category-a" href="">adiClub</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">adidas app</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">adidas Runners</a>
-                </li>
+                {category3.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category">
               <h3 className="category-title">DEPORTES</h3>
               <ul className="category-ul">
-                <li className="category-li">
-                  <a className="category-a" href="">Selección Argentina</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">River Plate</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Boca Juniors</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Fútbol</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Running</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Básquet</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Training</a>
-                </li>
+                {category4.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
                 <h3 className="category-title">COLECCIONES</h3>
-                <li className="category-li">
-                  <a className="category-a" href="">Ultraboost</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Stan Smith</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">adicolor</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Superstart</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Originals</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Forum</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Colección Black & White</a>
-                </li>
+                {category5.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category">
@@ -119,59 +61,21 @@ export function Category(){
                     <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/footer_general_boton_de_ayuda_tcm216-840664.png" alt="" />
                   </a>
                 </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Dudas Frecuentes</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Realizar Pedidos</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Productos adidas</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Pagos</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Envío</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Autogestionar mi Devolución</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Devoluciones</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Cambio en Tiendas</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Como Usar Nuestro Sitio</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Como Saber el Talla de tu Bra</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Guia de Talles</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Mapa del Sitio</a>
-                </li>
+                {category6.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category">
               <h3 className="category-title">INFORMACIÓN DE LA EMPRESA</h3>
               <ul className="category-ul">
-                <li className="category-li">
-                  <a className="category-a" href="">Acerca de adidas</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Trabaja en Nuestro Equipo Prensa</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Prensa</a>
-                </li>
-                <li className="category-li">
-                  <a className="category-a" href="">Información Corporativa</a>
-                </li>
+                {category7.map((Element, index)=> (
+                  <li className="category-li" key={index}>
+                    <a className="category-a" href="">{Element}</a>
+                  </li>
+                ))}
                 <h3>TIENDAS</h3>
                 <li className="category-li">
                   <a className="category-a" href="">Buscador de Tiendas</a>

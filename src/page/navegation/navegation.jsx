@@ -11,7 +11,7 @@ import heart from "../../assets/heart.svg";
 import burger from "../../assets/burger.svg";
 import profile from "../../assets/profile.svg";
 import x from "../../assets/x.svg";
-import { NavBurger } from "./NavBurger.jsx";
+import { NavBurger } from "./navBurger.jsx";
 export function Navegation({
   allProduct,
   setallProduct,

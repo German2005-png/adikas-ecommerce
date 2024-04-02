@@ -1,4 +1,10 @@
 export function Hombre({CategoryHombre, SetCategoryHombre}) {
+  const categoryHombre1 = ["Novedades", "Lo Más Vendidos", "Personaliza tu Camiseta", "Exclusivo Miembros", "Solo en adikas", "Próximos Lanzamientos"];
+  const categoryHombre2 = ["River Plate ¡Nuevo!", "Selección Argentina", "Precios Justos", "Esenciales de Primavera 🌷"];
+  const categoryHombre3 = ["Novedades", "Ver Todas las Zapatillas", "Running", "Gimnasio y Training", "Outdoor", "Botines", "Ojotas", "Calzado de Plataforma", "Originals"];
+  const categoryHombre4 = ["Remeras y Chombas", "Calzas", "Camperas", "Buzos", "Pantalones", "Camisetas de Fútbol", "Shorts", "Conjuntos", "Originals"];
+  const categoryHombre5 = ["Bolsos y Mochilas", "Pelotas", "Gorras", "Medias"];
+  const categoryHombre6 = ["Running", "Fútbol", "Gimnasio y Traning", "Tenis", "Outdoor", "Natación", "Yoga", "Padel"];
   return (
     <>
       <div
@@ -21,57 +27,17 @@ export function Hombre({CategoryHombre, SetCategoryHombre}) {
                 <h4 className="category-hombre-title">PRODUCTO DESTACADO</h4>
               </a>
               <ul className="category-hombre-ul">
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Novedades
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Lo Más Vendidos
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Personaliza tu Camiseta
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Exclusivo Miembros
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Solo en adidas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Próximos Lanzamientos
-                  </a>
-                </li>
+                {categoryHombre1.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                    <a className="category-hombre-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
                 <br />
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    River Plate ¡Nuevo!
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Selección Argentina
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Precios Justos
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Esenciales de Primavera 🌷
-                  </a>
-                </li>
+                {categoryHombre2.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                    <a className="category-hombre-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-hombre-bottom">
@@ -86,51 +52,11 @@ export function Hombre({CategoryHombre, SetCategoryHombre}) {
                 <h4 className="category-hombre-title">CALZADO</h4>
               </a>
               <ul className="category-hombre-ul">
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Novedades
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Ver Todas las Zapatillas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Running
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Gimnasio y Training
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Outdoor
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Botines
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Ojotas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Calzado de Plataforma
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Originals
-                  </a>
-                </li>
+                {categoryHombre3.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                  <a className="category-hombre-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-hombre-bottom">
@@ -145,51 +71,11 @@ export function Hombre({CategoryHombre, SetCategoryHombre}) {
                 <h4 className="category-hombre-title">ROPA</h4>
               </a>
               <ul className="category-hombre-ul">
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Remeras y Chombas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Calzas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Camperas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Buzos
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Pantalones
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Camisetas de Fútbol
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Shorts
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Conjuntos
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Originals
-                  </a>
-                </li>
+                {categoryHombre4.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                    <a className="category-hombre-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-hombre-bottom">
@@ -204,26 +90,11 @@ export function Hombre({CategoryHombre, SetCategoryHombre}) {
                 <h4 className="category-hombre-title">ACCESORIOS</h4>
               </a>
               <ul className="category-hombre-ul">
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Bolsos y Mochilas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Pelotas
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Gorras
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Medias
-                  </a>
-                </li>
+                {categoryHombre5.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                    <a className="category-hombre-a" href={Element}>{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-hombre-bottom">
@@ -238,46 +109,11 @@ export function Hombre({CategoryHombre, SetCategoryHombre}) {
                 <h3 className="category-hombre-title">DEPORTES</h3>
               </a>
               <ul className="category-hombre-ul">
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Running
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Fútbol
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Gimnasio y Training
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Tenis
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Outdoor
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-mujer-a" href="">
-                    Natación
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-mujer-a" href="">
-                    Yoga
-                  </a>
-                </li>
-                <li className="category-hombre-li">
-                  <a className="category-hombre-a" href="">
-                    Padel
-                  </a>
-                </li>
+                {categoryHombre6.map((Element, index)=> (
+                  <li className="category-hombre-li" key={index}>
+                    <a className="category-hombre-a" href="">{Element}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="category-hombre-bottom">
