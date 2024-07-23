@@ -777,3 +777,11 @@ footer{
     right: 0;
     margin-right: 184px;
 }
+
+.cont-precio-justo{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    background-color: #eceff1;
+}

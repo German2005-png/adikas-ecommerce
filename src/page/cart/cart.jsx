@@ -58,11 +58,9 @@ export function Cart({
   },[])
   const handleSelectChange = (event) => {
     let newValue = event.target.value;
-    alert(newValue)
     setSelectValue(newValue);
     if (parseInt(newValue) > 1) {
       let precioTotatlxd = (pr * 10**pr.toFixed().length) * parseInt(newValue);
-      alert(precioTotatlxd.toLocaleString("es-ES"));
     }
   };
   return (
@@ -353,7 +351,6 @@ export function Cart({
                         <p className="cart-size">TAMAÑO: M</p>
                         <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
                           <strong>${new Intl.NumberFormat('es-ES').format(items.precio)}</strong>
-                          <strong>${items.precio}</strong>
                         <select
                           name="choose-contador-product"
                           id={`contador-product-${items.id}`}

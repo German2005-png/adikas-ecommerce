@@ -22,7 +22,6 @@ export function Home({contadorPro, setcontadorPro}) {
         setonSearchCont(false);
       }
     };
-    alert("¡ESTE SÍTIO NO ES OFICIAL DE ADIDAS!")
     document.addEventListener('click', handleClickOutside);
 
     return () => {
@@ -33,13 +32,13 @@ export function Home({contadorPro, setcontadorPro}) {
   return (
     <>
       <Navegation  Products2={article2} contadorPro={contadorPro} onSearchCont={onSearchCont} setonSearchCont={setonSearchCont} leep={leep} setLeep={setLeep}/>
-      {onSearchCont ? (
+      {/* {onSearchCont ? (
         <>
         <div className="cont-search-value" ref={componenteRef}>
           <p>{leep}</p>
         </div>
         </>
-      ): ""}
+      ): ""} */}
       <Content1 contadorPro={contadorPro} setcontadorPro={setcontadorPro} />
       <Aside contadorPro={contadorPro} setcontadorPro={setcontadorPro} />
       <Advertising contadorPro={contadorPro} setcontadorPro={setcontadorPro} />

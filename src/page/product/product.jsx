@@ -51,14 +51,11 @@ export function Product({
   item = item.endsWith("/") ? item.slice(0, -1).replaceAll("-", " "): item.replaceAll("-", " ")
   let itemId = parseInt(item)
   let itemName = item.replace(itemId + "/", "")
-  console.log(itemName)
   const datosRecuperados = article2.find((value)=> value.id == itemId) || forum.forum.find((value)=> value.id == itemId) || crazyrush1.crazyrush1.find((value)=> value.id == itemId) || crazyrush2.crazyrush2.find((value)=> value.id == itemId);
   let bol = article2.find((i)=> i.nombre == itemName)
-  console.log(datosRecuperados.nombre)
   if(itemName == datosRecuperados.nombre.replace(".", "")){
-    console.log("Es igual")
+    console.log(".")
   }else{
-    console.log("No es igual")
     location.pathname = `/product/${datosRecuperados.id}/${convertToURL2(datosRecuperados.nombre)}`
   }
   const [selectedTalla, setSelectedTalla] = useState("");
@@ -177,11 +174,6 @@ export function Product({
                     // Actualiza la variable contadorPro en tu estado local
                     setcontadorPro(newCount);
                     addToCart(datosRecuperados)
-                    console.log("allProduct", allProduct)
-                    // if(localStorage.getItem(`cart${newCount}`) == datosRecuperados.id){
-
-                    // }
-                    console.log("datosRecuperados: ",datosRecuperados);
                   }}
                 >
                   AÑADIR AL CARRITO <img src={rightarrow} alt="" />
@@ -283,20 +275,11 @@ export function Product({
                   className="product-btn-cart ll l2"
                   onClick={() => {
                     setcontadorPro(contadorPro + 1);
-                    // Recupera el valor actual del contador del almacenamiento local
                     const storedCount = parseInt(localStorage.getItem("cartContador1"), 10) || 0;
-                     // Incrementa el contador
                     const newCount = storedCount + 1;
-                    // Almacena el nuevo valor en el almacenamiento local
                     localStorage.setItem("cartContador1", newCount);
-                    // Actualiza la variable contadorPro en tu estado local
                     setcontadorPro(newCount);
                     addToCart(datosRecuperados)
-                    console.log("allProduct", allProduct)
-                    // if(localStorage.getItem(`cart${newCount}`) == datosRecuperados.id){
-
-                    // }
-                    console.log("datosRecuperados: ",datosRecuperados);
                   }}
                 >
                   <span>AÑADIR AL CARRITO</span> <img src={rightarrow} alt="" />
